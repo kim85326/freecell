@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Week2 新接龍</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Volkhov&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/index.css" />
+    </head>
+    <body>
+        <div class="app">
+            <div class="main">
+                <div class="game">
+                    <div class="game-header">
+                        <div class="game-header-block free-cell-block">
+                            <div class="card-slot"></div>
+                            <div class="card-slot"></div>
+                            <div class="card-slot"></div>
+                            <div class="card-slot"></div>
+                        </div>
+                        <div class="game-header-block home-cell-block">
+                            <div class="card-slot">
+                                <img
+                                    src="./images/slot-club.svg"
+                                    class="card-slot-suit"
+                                />
+                            </div>
+                            <div class="card-slot">
+                                <img
+                                    src="./images/slot-diamond.svg"
+                                    class="card-slot-suit"
+                                />
+                            </div>
+                            <div class="card-slot">
+                                <img
+                                    src="./images/slot-heart.svg"
+                                    class="card-slot-suit"
+                                />
+                            </div>
+                            <div class="card-slot">
+                                <img
+                                    src="./images/slot-spade.svg"
+                                    class="card-slot-suit"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-body">
+                        <div class="column">
+                            <div class="card-slot"></div>
+                            <div class="card blue">
+                                <div class="card-header">
+                                    <div class="card-number">K</div>
+                                    <img
+                                        src="./images/club_s.svg"
+                                        alt=""
+                                        class="card-suit"
+                                    />
+                                </div>
+                                <div class="card-body">
+                                    <img
+                                        src="./images/K-blue.svg"
+                                        alt=""
+                                        class="card-image"
+                                    />
+                                </div>
+                            </div>
+                            <div class="card blue">
+                                <div class="card-header">
+                                    <div class="card-number">K</div>
+                                    <img
+                                        src="./images/club_s.svg"
+                                        alt=""
+                                        class="card-suit"
+                                    />
+                                </div>
+                                <div class="card-body">
+                                    <img
+                                        src="./images/K-blue.svg"
+                                        alt=""
+                                        class="card-image"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="sidebar-top">
+                    <div class="logo">
+                        <img
+                            src="./images/K-blue.svg"
+                            alt=""
+                            class="logo-image"
+                        />
+                    </div>
+                    <div class="logo-text">FreeCell</div>
+                </div>
+                <div class="sidebar-bottom">
+                    <div class="game-info">
+                        <div class="game-info-group">
+                            <label>Score</label>
+                            <span class="score">0</span>
+                        </div>
+                        <div class="game-info-group">
+                            <label>Time</label>
+                            <span class="time">00:00</span>
+                        </div>
+                    </div>
+                    <button class="button">Undo</button>
+                    <button class="button">New Game</button>
+                    <button class="button">Restart</button>
+                </div>
+            </div>
+        </div>
+        <script src="./js/index.js"></script>
+    </body>
+</html>
