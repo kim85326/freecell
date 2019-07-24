@@ -50,7 +50,7 @@ button:active {
 
 .game {
     width: 1110px;
-    height: 800px;
+    height: 100%;
     padding: 30px;
 }
 
@@ -85,6 +85,7 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .game-header .card-slot:not(:last-child) {
@@ -145,6 +146,8 @@ button:active {
     margin-bottom: 10px;
 }
 
+$card-gap: 45px;
+
 .card {
     width: 105px;
     height: 135px;
@@ -156,6 +159,17 @@ button:active {
     border: 1px solid #ccc2ad;
     display: flex;
     flex-direction: column;
+    user-select: none;
+}
+
+@for $i from 1 through 13 {
+    .card:nth-child(#{$i}) {
+        top: ($i - 1) * $card-gap;
+    }
+}
+
+.card:last-child {
+    cursor: grab;
 }
 
 .card-header {
@@ -163,6 +177,7 @@ button:active {
     justify-content: space-between;
     align-items: flex-end;
     padding: 5px 10px 0;
+    pointer-events: none;
 }
 
 .card-number {
@@ -186,4 +201,5 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
 }
