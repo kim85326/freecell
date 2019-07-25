@@ -86,6 +86,24 @@ button:active {
     justify-content: center;
     align-items: center;
     position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-slot.club {
+    background-image: url("../images/slot-club.svg");
+}
+
+.card-slot.diamond {
+    background-image: url("../images/slot-diamond.svg");
+}
+
+.card-slot.heart {
+    background-image: url("../images/slot-heart.svg");
+}
+
+.card-slot.spade {
+    background-image: url("../images/slot-spade.svg");
 }
 
 .game-header .card-slot:not(:last-child) {
@@ -163,7 +181,7 @@ $card-gap: 45px;
 }
 
 @for $i from 1 through 13 {
-    .card:nth-child(#{$i}) {
+    .other-cell-block .card:nth-child(#{$i}) {
         top: ($i - 1) * $card-gap;
     }
 }
