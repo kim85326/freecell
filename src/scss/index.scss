@@ -123,6 +123,7 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
 .logo-text {
@@ -186,7 +187,7 @@ $card-gap: 45px;
     }
 }
 
-.card:last-child {
+.card[data-draggable] {
     cursor: grab;
 }
 
