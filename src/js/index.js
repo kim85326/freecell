@@ -99,6 +99,9 @@ function shuffle(cards) {
 
 function initOtherCellSlots(cards) {
     for (let i = 0; i < otherCellSlots.length; i++) {
+        // 清空所有 slot
+        otherCellSlots[i] = [];
+
         let slotCapacity;
 
         if (i <= 3) {
@@ -332,3 +335,43 @@ function mouseup(event) {
     draggingDom.style.zIndex = "";
     isDragging = false;
 }
+
+// start new game dialog
+const showStartNewGameDialogButton = document.getElementById(
+    "show-start-new-game-dialog-button"
+);
+const hideStartNewGameDialogButton = document.getElementById(
+    "hide-start-new-game-dialog-button"
+);
+const startNewGameDialog = document.getElementById("start-new-game-dialog");
+const startNewGameButton = document.getElementById("start-new-game-button");
+
+showStartNewGameDialogButton.addEventListener("click", () => {
+    startNewGameDialog.classList.remove("hidden");
+});
+
+hideStartNewGameDialogButton.addEventListener("click", () => {
+    startNewGameDialog.classList.add("hidden");
+});
+
+startNewGameButton.addEventListener("click", () => {
+    startNewGameDialog.classList.add("hidden");
+    main();
+});
+
+// restart game dialog
+const showRestartGameDialogButton = document.getElementById(
+    "show-restart-game-dialog-button"
+);
+const hideRestartGameDialogButton = document.getElementById(
+    "hide-restart-game-dialog-button"
+);
+const restartGameDialog = document.getElementById("restart-game-dialog");
+
+showRestartGameDialogButton.addEventListener("click", () => {
+    restartGameDialog.classList.remove("hidden");
+});
+
+hideRestartGameDialogButton.addEventListener("click", () => {
+    restartGameDialog.classList.add("hidden");
+});
