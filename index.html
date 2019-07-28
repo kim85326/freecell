@@ -63,9 +63,66 @@
                             <span class="time">00:00</span>
                         </div>
                     </div>
-                    <button class="button">Undo</button>
-                    <button class="button">New Game</button>
-                    <button class="button">Restart</button>
+                    <button class="button" id="undo-button">Undo</button>
+                    <button class="button" id="show-start-new-game-dialog-button">New Game</button>
+                    <button class="button" id="show-restart-game-dialog-button">Restart</button>
+                </div>
+            </div>
+            <div class="mask hidden" id="start-new-game-dialog">
+                <div class="dialog">
+                    <div class="dialog-header">
+                        Start a new game
+                    </div>
+                    <div class="dialog-body">
+                        Are you sure you want to quit ?
+                    </div>
+                    <div class="dialog-footer">
+                        <div class="button-group">
+                            <button class="button button-none-border" id="hide-start-new-game-dialog-button">
+                                Keep Playing
+                            </button>
+                            <button class="button button-primary" id="start-new-game-button">
+                                New Game
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mask hidden" id="finish-game-dialog">
+                <div class="dialog">
+                    <div class="dialog-header">
+                        Congratulations !
+                    </div>
+                    <div class="dialog-body">
+                        You win!
+                    </div>
+                    <div class="dialog-footer">
+                        <div class="button-group">
+                            <button class="button button-primary">
+                                New Game
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mask hidden" id="restart-game-dialog">
+                <div class="dialog" id="restart-game-dialog">
+                    <div class="dialog-header">
+                        Restart this game
+                    </div>
+                    <div class="dialog-body">
+                        Are you sure you want to quit ?
+                    </div>
+                    <div class="dialog-footer">
+                        <div class="button-group">
+                            <button class="button button-none-border" id="hide-restart-game-dialog-button">
+                                Keep Playing
+                            </button>
+                            <button class="button button-primary" id="restart-game-button">
+                                Restart
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
